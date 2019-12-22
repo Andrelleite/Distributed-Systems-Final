@@ -1,0 +1,93 @@
+@charset "ISO-8859-1";
+
+
+
+.divonindexpage{
+    position: absolute;
+    top: 31%;
+    left: 20%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 800px;
+    height: 800px;
+    font-size: 21px;
+}
+
+.head{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 1100px;
+    height: 1100px;
+    font-size: 35px;
+}
+
+.meio{
+	position: relative;	
+    left: 70%;
+    margin-left: -50px;
+}
+​
+.centro{
+	
+	position: relative;	
+	top:20%;
+	left:70%;
+	
+}
+
+.urlink{
+	
+	font-size:18px;
+	
+}
+
+.pagetitle{
+	
+	color:#3d8d7b;
+	font-weight: bold;
+	font-size: 23px;
+}
+
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+#snackbar.show {
+  visibility: visible; 
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
