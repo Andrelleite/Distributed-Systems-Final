@@ -76,6 +76,7 @@ public class HeyBean extends UnicastRemoteObject implements RMIClientInterface{
         this.userID =  gerador.nextInt()+8000;
         this.messageID = 0;
         this.packet = "";
+	this.apikey = 'AKIAEXAMPLEACCESSKEY'
         this.wait = true;
         this.onAdminMode = false;
         this.admin = false;
@@ -99,10 +100,10 @@ public class HeyBean extends UnicastRemoteObject implements RMIClientInterface{
 	}
 	
     /**
-     *  Esta função determina a reposta inerente no protocolo de regresso. Verifica tokens necessários para
+     *  Esta funÃ§Ã£o determina a reposta inerente no protocolo de regresso. Verifica tokens necessÃ¡rios para
      *  determinar a resposta ou o estado do pedido.
      * @param ak string de protocolo para desmantelamento
-     * @return array de inteiros, com tamanho 2, posição 0 tem estado da resposta e 1 o ID do utlizador, caso verifique
+     * @return array de inteiros, com tamanho 2, posiÃ§Ã£o 0 tem estado da resposta e 1 o ID do utlizador, caso verifique
      * @throws IOException 
      */
     public int[] replyEval(String ak) throws IOException{
@@ -263,7 +264,7 @@ public class HeyBean extends UnicastRemoteObject implements RMIClientInterface{
 
     /**
      *  Print de uma menssagem de sucesso, para que o utilizador fique a saber qual o resultado do seu pedido
-     * @param eval vetor de inteiros, tamanho 2, onde é guardado em 0 o resultado e em 1 um ID caso seja login
+     * @param eval vetor de inteiros, tamanho 2, onde Ã© guardado em 0 o resultado e em 1 um ID caso seja login
      * @throws RemoteException
      */
     public boolean tricky(int[] eval)throws RemoteException{
@@ -925,7 +926,7 @@ public class HeyBean extends UnicastRemoteObject implements RMIClientInterface{
 	//=======================GETTERS====================================================================================
 
     /**
-     * Permite acesso, pelo servidor RMI, às variveis locais do Utilzador
+     * Permite acesso, pelo servidor RMI, Ã s variveis locais do Utilzador
      * @return ID do utlizador
      */
     public int getUserID(){
@@ -933,7 +934,7 @@ public class HeyBean extends UnicastRemoteObject implements RMIClientInterface{
     }
 
     /**
-     * Permite acesso, pelo servidor RMI, às variveis locais do Utilzador
+     * Permite acesso, pelo servidor RMI, Ã s variveis locais do Utilzador
      * @return Estado de login do utlizador
      */
     public boolean getAllPass(){
@@ -945,7 +946,7 @@ public class HeyBean extends UnicastRemoteObject implements RMIClientInterface{
     }
 
     /**
-     * Permite acesso, pelo servidor RMI, às variveis locais do Utilzador
+     * Permite acesso, pelo servidor RMI, Ã s variveis locais do Utilzador
      * @return id da menssagem atual
      */
     public int getMessageID(){
@@ -953,7 +954,7 @@ public class HeyBean extends UnicastRemoteObject implements RMIClientInterface{
     }
 
     /**
-     * Permite acesso, pelo servidor RMI, às variveis locais do Utilzador
+     * Permite acesso, pelo servidor RMI, Ã s variveis locais do Utilzador
      * @return estado de admin
      */
     public boolean getAdminStat(){
@@ -961,7 +962,7 @@ public class HeyBean extends UnicastRemoteObject implements RMIClientInterface{
     }
 
     /**
-     * Permite acesso, pelo servidor RMI, às variveis locais do Utilzador
+     * Permite acesso, pelo servidor RMI, Ã s variveis locais do Utilzador
      * @return estatuto de admin
      */
     public boolean getAdmin(){
@@ -971,7 +972,7 @@ public class HeyBean extends UnicastRemoteObject implements RMIClientInterface{
     //=======================SETTERS=================================
 
     /**
-     * Define o estado de espera do utilizador. Esta função é usada pelo RMI server
+     * Define o estado de espera do utilizador. Esta funÃ§Ã£o Ã© usada pelo RMI server
      * @param state boolean que define estado de espera de utilizador
      */
     public void setWait(boolean state){
@@ -979,7 +980,7 @@ public class HeyBean extends UnicastRemoteObject implements RMIClientInterface{
     }
 
     /**
-     * Define o pacote de resposta, esperado pelo utilizador. Esta função é usada pelo RMI server
+     * Define o pacote de resposta, esperado pelo utilizador. Esta funÃ§Ã£o Ã© usada pelo RMI server
      * @param packet string com o protocolo
      */
     public void setPacket(String packet){
@@ -987,7 +988,7 @@ public class HeyBean extends UnicastRemoteObject implements RMIClientInterface{
     }
 
     /**
-     *  Permitir que o RMI Server tenha a capacidade de entregar notificações em tempo real
+     *  Permitir que o RMI Server tenha a capacidade de entregar notificaÃ§Ãµes em tempo real
      * @param stats updates no servidor Multicast
      */
     public void printAdminStats(String stats){
@@ -1029,7 +1030,7 @@ public class HeyBean extends UnicastRemoteObject implements RMIClientInterface{
     
     
     /**
-     *  Permitir que o RMI Server tenha a capacidade de entregar notificações em tempo real
+     *  Permitir que o RMI Server tenha a capacidade de entregar notificaÃ§Ãµes em tempo real
      * @param stats updates no servidor Multicast
      */
     public void printActiveMulticast(String stats){
@@ -1063,7 +1064,7 @@ public class HeyBean extends UnicastRemoteObject implements RMIClientInterface{
 	}
 
 	 /**
-     * Permite acesso, pelo servidor RMI, às variveis locais do Utilzador
+     * Permite acesso, pelo servidor RMI, Ã s variveis locais do Utilzador
      * @return estatuto de admin
      */
 	public String getUserName(){
